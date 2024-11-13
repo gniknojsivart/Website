@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ Title of Your Blog Post }}</title>
+    <meta name="description" content="{{ Description for SEO }}">
+    <meta name="keywords" content="{{ Keywords for SEO }}">
+    <meta name="author" content="{{ Your Name }}">
+    <link rel="stylesheet" href="blog-style.css"> <!-- Link to your CSS file -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{ Blog Post URL }}"
+      },
+      "headline": "{{ Title of Your Blog Post }}",
+      "description": "{{ Description for SEO }}",
+      "image": "{{ URL of Featured Image }}",
+      "author": {
+        "@type": "Person",
+        "name": "{{ Your Name }}"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "{{ Your Company Name }}",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "{{ URL of Your Company Logo }}"
+        }
+      },
+      "datePublished": "{{ Date of Publication }}",
+      "dateModified": "{{ Date Last Modified }}"
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="/">Your Blog Name</a>
+            </div>
+            <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="blog-post">
+        <article id="main-article">
+            <h1>{{ Title of Your Blog Post }}</h1>
+            <div class="meta">
+                <p>By {{ Your Name }} | Published on {{ Date of Publication }} | Category: {{ Category }}</p>
+            </div>
+
+            <!-- Feature Image -->
+            <img src="{{ URL of Featured Image }}" alt="{{ Alt Text of Image }}">
+
+            <!-- Content goes here -->
+            <section class="content">
+                {{ Your Blog Post Content }}
+            </section>
+
+            <!-- Tags -->
+            <div class="tags">
+                <strong>Tags:</strong> {{ Tags }}
+            </div>
+
+            <!-- Call to Action -->
+            <div class="cta">
+                <h3>Want More DIY Tips?</h3>
+                <p>Sign up for our newsletter to get the latest DIY projects and tool advice delivered to your inbox.</p>
+                <form action="subscribe.php" method="post">
+                    <input type="email" name="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+
+            <!-- Comments Section -->
+            <div id="comments">
+                <h2>Comments</h2>
+                {{ Comment System Here (e.g., Disqus, custom form, etc.) }}
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; {{ Current Year }} Your Blog Name. All rights reserved.</p>
+        <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+    </footer>
+
+    <script src="blog-script.js"></script> <!-- Link to your JavaScript file for functionality -->
+</body>
+</html>
